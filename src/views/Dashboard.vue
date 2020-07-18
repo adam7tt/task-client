@@ -25,6 +25,7 @@
                 <div class="column is-12">
                 <b-field>
                     <b-input 
+                        id="taskInput"
                         type="textarea" 
                         placeholder="What needs to be done?" 
                         v-model="newTask" 
@@ -63,9 +64,13 @@
                         description: this.newTask
                     }).then((res) => {
                         this.tasks.push(res.data)
+                        this.newTask = ''
                     }).catch((error) => {
                         console.log(error)
                     })
+
+                        const input = document.querySelector('#taskInput')
+                        input.textContent = 'asdads'
             },
             editTask(task) {
                 task.completed = !task.completed

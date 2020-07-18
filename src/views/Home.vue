@@ -1,5 +1,5 @@
 <template>
-  <div class="home mt-6">
+  <div class="home centerall">
     <div class="child">
     <h1 class="is-size-1 has-text-centered">Welcome to Taskr!</h1>
     <div class="has-text-centered" v-if="!loggedIn">
@@ -26,13 +26,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.home {
-    display: grid;
-    place-items: center;
-  }
-  
-.child{
-  padding: 0.5rem;
-  border-radius: 10px;
+.centerall {
+height: 100vh;
+padding: 0;
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
 }
 </style>
