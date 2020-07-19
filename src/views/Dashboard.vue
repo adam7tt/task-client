@@ -124,7 +124,11 @@
                 }
             }
         },
-        computed: {},
+        computed: {
+            user() {
+                return this.$store.state.user
+            }
+        },
         watch: {
             tasks(newTasks) {
                 this.tasks = newTasks

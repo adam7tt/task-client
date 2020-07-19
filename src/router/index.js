@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login'
 import Register from '../views/Register'
 import Dashboard from '../views/Dashboard'
+import Profile from '../views/Profile'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ Vue.use(VueRouter)
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
+    meta: {requiresAuth: true}
+  },  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile,
     meta: {requiresAuth: true}
   },
 ]
